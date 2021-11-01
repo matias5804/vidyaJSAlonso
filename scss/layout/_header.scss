@@ -1,0 +1,154 @@
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+#headerContacto{
+    padding-top: 1rem ;
+    position: relative;
+}
+
+
+
+.nav__header{/*agregue important por que no me lo toma por la especificidad de bootstrap*/
+    padding: 1rem ;
+    display: flex ;
+    justify-content: space-between ;
+    align-items: center;
+}
+
+.nav__img{
+    width: 40px;
+    height: 40px;
+}
+
+.nav__menuMobile{ /*color de los botonos*/
+    color: $colorWhite;
+    border: 1px solid $colorWhite;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__container{
+    position: absolute ;
+    background: $colorPri;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 0; /*es para ocultar el menu*/
+    overflow: hidden; /* es para el desbordamiento del menu*/
+    transition: height 0.4s ease;/*transicion lenta*/
+    z-index: 1;
+}
+
+.nav__link{/*color de los enlaces*/
+    color: $colorWhite;
+}
+
+#nav__header:target .nav__container{/*para que se despliegue el menu*/
+    height: 300px;
+}
+
+#nav__header:target .open{ /*se oculta el icono de hamburguesa cuando hago click en ella*/
+    display: none;
+}
+
+#nav__header:target .close{
+    display: flex;
+}
+
+.close{ /*el boton de cerrar por defecto no se ve*/
+    display: none;
+}
+
+.nav__iconLupa{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+.nav__divBrand{
+    order: 1;
+}
+
+.nav__divButtons{
+    order: -2;
+}
+    
+.nav__divIconos{
+    order: 1;
+    
+}/*fin de los estilos del header hasta los 599px*/
+
+
+/*inicio de los estilos del header a partir de los 600px*/
+@media (min-width: 600px){
+
+    .nav__link{/*tamaño de letra de los enlaces*/
+        font-size: $font-size-xl;
+    }
+}/*fin de los estilos del header a partir de los 600px*/
+
+
+/*inicio de los estilos del header a partir de los 1000px*/
+@media (min-width: 1000px){
+    .logoContacto{
+        height: 100px ;
+        width: auto ;
+    }
+
+    .nav{
+        display: flex ;
+        justify-content: space-between ;
+        align-items: center ;
+        height: 150px ;
+    }
+    
+    .nav__menuMobile{ /*oculta el icono del menu*/
+        display: none; 
+    }
+
+    .nav__img{
+        display: none;
+    }    
+
+    .nav__container{/*se ajusta a su contenido, se pone en fila , y cambiamos su position a relative, tamaño de letra y color de fondo*/
+        flex-direction: row ;
+        position: relative ;
+        width: 60% ;
+        height: 150px;
+        right: 120px ;
+        font-size: $font-size-xl ;
+        background-color: $colorWhite;
+    }
+
+    .nav__link{/*cambio los colores de los links*/
+        color: $colorPri;
+    }
+
+    .nav__logo{ /*cambio tamaño del logo*/
+        height: 100px ;
+        width: auto ;
+        position: absolute;
+        left: 1.5rem ;
+        top: 1.5rem ;
+    }
+    
+    .nav__divIconos{/*cambio la posicion de los iconos */
+        position: absolute ;
+        right: 1.5rem;
+    }
+}/*fin de los estilos del header a partir de los 1000px*/
+    
+

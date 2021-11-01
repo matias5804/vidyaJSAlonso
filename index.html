@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOME - VIDYA - Venta de productos SUSTENTABLES</title>
+    <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+    <link href = "https: //fonts.googleapis.com/css2? family = Montserrat & display = swap "rel =" stylesheet ">
+    <meta name="description" content="Más de 300 Productos Sustentables, Saludables y de Excelente Calidad. Venta por Unidad. Venta a Mayoristas. Encontrá en Vidya Productos Para Un Consumo Consciente.">
+    <meta name="keywords"  content="PRODUCTOS, SUSTENTABLES, VENTA">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+    <!--INICIO DEL HEADER--> 
+    <header class="nav" id="nav__header">
+        
+        <!--inicio del navegador-header (logo -menu - buscador - carrito - usuario)-->  
+        <nav class="nav__header" >
+            <!--logo-->
+            <div class="nav__divBrand">
+                <a href="index.html" class="nav__brandLink">
+                    <img class="nav__logo" src="Imagenes/logoHorizontal.png" alt="logo">
+                </a>
+            </div>
+
+            <!--botones del menu abrir y cerrar(ha,burguesa y cruz)-->
+            <div class=".nav__divButtons">
+                <a href="#nav__header" class="nav__menuMobile open">
+                    <img class="nav__img" src="Imagenes/iconos/iconMenu.png" alt="boton abrir menu">
+                </a>
+
+                <a href="#" class="nav__menuMobile close">
+                    <img class="nav__img" src="Imagenes/iconos/iconMenuCerrado.png"  alt="boton cerrar menu">
+                </a>
+            </div>
+
+            <!--buscador, usuario, carrito-->
+            <div class="nav__divIconos">
+                <a  href="secundariosHtml/error.html" class="nav__iconLupa" >
+                    <img src="Imagenes/iconos/lupaBuscador.svg"width="30" height="30"  alt="icon buscador">
+                </a>
+
+                <a href="secundariosHtml/sesion.html" class="nav__iconUsuario">
+                    <img src="Imagenes/iconos/logoUsuario.svg" width="30" height="30" alt="icon usuario" >
+                </a>
+            </div>
+
+        </nav>
+        
+        <!--menu central (escondido en mobilefirst) -->  
+        <ul class="nav__container">
+            <li class="nav__item">
+                <a href="principalesHtml/tienda.html" class="nav__link">TIENDA</a>
+            </li>
+            <li class="nav__item">
+                <a href="principalesHtml/lifestyle.html" class="nav__link">LIFESTYLE</a>
+            </li>
+            <li class="nav__item">
+                <a href="principalesHtml/nosotros.html" class="nav__link">NOSOTROS</a>
+            </li>
+            <li class="nav__item">
+                <a href="principalesHtml/contacto.html" class="nav__link">CONTACTO</a>
+            </li>
+        </ul>
+
+    </header>
+    <!--FIN DEL HEADER-->
+
+    <!--Comienzo del main--> 
+    <main class="main">
+
+        <!--seccion de call to action (titulo- imagen- boton)-->
+        <section class="callToAction">
+     
+            <img class="callToAction__img" src="Imagenes/imagenesCarrucel/portada.jpg" alt="imagen de portada">  
+
+            <div class="mask">  
+              <h1>Vidya</h1>  
+              <p>Nunca es tarde para tener una vida sustentable </p>
+              <a href="principalesHtml/tienda.html" class="info">Ir a la Tienda</a>  
+            </div>  
+       
+        </section>
+                     
+        <!--seccion de novedades (titulo - articulo + descripcion)-->
+         <!--<section class="novedades">
+
+            <div>
+                <h1 class="novedades__titulo">NOVEDADES</h1>
+            </div>
+        
+           <div class="novedades__div">
+                
+                <div class="novedades__contenedorArticulo"     >
+                    <a href="productosHtml/discosDesmaquillantes.html">
+                        <div class="novedades__divImagen"> 
+                            <img class="novedades__imagen" src="Imagenes/imagenesArticulos/discosDesmaquillantes.jpeg"  alt="imagen del producto Discos Desmaquillantes">
+                        </div>
+                    </a>
+
+                    <div class="novedades__divProPreBot">
+                        <h3 class="novedades__tituloProducto">Desmaquillantes</h3>
+                        <p class="novedades__precio">$<span>340</span> </p>
+                        <button class="btnComprar">
+                            Agregar al Carrito
+                        </button>
+                    </div>    
+                </div>
+
+                <div class="novedades__contenedorArticulo">
+                    <a href="productosHtml/discosDesmaquillantes.html">
+                        <div class="novedades__divImagen"> 
+                            <img class="novedades__imagen" src="Imagenes/imagenesArticulos/origamiBags.jpeg"  alt="imagen del producto Discos Desmaquillantes">
+                        </div>
+                    </a>
+
+                    <div class="novedades__divProPreBot">
+                        <h3 class="novedades__tituloProducto">Origami bargs</h3>
+                        <p class="novedades__precio">$<span>315</span> </p>
+                        <button class="btnComprar">
+                            Agregar al Carrito
+                        </button>
+                    </div>    
+                </div>
+
+                <div class="novedades__contenedorArticulo">
+                    <a href="productosHtml/peineCola.html">
+                        <div class="novedades__divImagen"> 
+                            <img class="novedades__imagen" src="Imagenes/imagenesArticulos/peineCola.jpeg"  alt="imagen del producto Discos Desmaquillantes">
+                        </div>
+                    </a>
+
+                    <div class="novedades__divProPreBot">
+                        <h3 class="novedades__tituloProducto">Peine de cola</h3>
+                        <p class="novedades__precio">$<span>740</span> </p>
+                        <button class="btnComprar">
+                            Agregar al Carrito
+                        </button>
+                    </div>    
+                </div>
+
+                <div class="novedades__contenedorArticulo">
+                    <a href="productosHtml/setLimpiezaCuerpo.html">
+                        <div class="novedades__divImagen"> 
+                            <img class="novedades__imagen" src="Imagenes/imagenesArticulos/setLimpiezaDeCuerpo.jpeg"  alt="imagen del producto Discos Desmaquillantes">
+                        </div>
+                    </a>
+
+                    <div class="novedades__divProPreBot">
+                        <h3 class="novedades__tituloProducto">Set Limpieza Corporal</h3>
+                        <p class="novedades__precio">$<span>270</span> </p>
+                        <button class="btnComprar">
+                            Agregar al Carrito
+                        </button>
+                    </div>    
+                </div>
+               
+                <template id="template-productos">
+                    <div class="novedades__contenedorArticulo">
+                        <a href="productosHtml/discosDesmaquillantes.html">
+                            <div> 
+                                <img class="novedades__imagen" src="Imagenes/imagenesArticulos/discosDesmaquillantes.jpeg"  alt="imagen del producto Discos Desmaquillantes">
+                            </div>
+                        </a>
+
+                        <div class="novedades__divProPreBot">
+                            <h3 class="novedades__tituloProducto">Desmaquillantes</h3>
+                            <p class="novedades__precio">$<span>340</span> </p>
+                            <button class="btnComprar">
+                                Agregar al Carrito
+                            </button>
+                        </div>    
+                    </div>
+                </template>
+                
+            </div>-->
+               
+          
+        <!--seccion de opiniones (titulo + opiniones)-->
+        <section class="opiniones"> 
+
+            <div>
+                <h1 class="opiniones__titulo">Opiniones</h1>
+            </div> 
+
+            <div class="opiniones__div">
+                <div class="opiniones__contenedor">
+                    <p class="opiniones__parrafo">"Todos los objetos que venden tienen"
+                        <strong>una rázon de ser y de estar</strong>
+                        ", una folosofía muy interesante hoy en día y que plantea un modelo de consumo lo"
+                        <strong>más sostenible posible.</strong>
+                    </p>
+                </div>
+
+                <div class="opiniones__contenedor">
+                    <p class="opiniones__parrafo">"Tienda que promueve la "<strong>sustentabilidad</strong>
+                    " y el "
+                    <strong>cuidado del planeta.</strong>
+                    "tratan genial a la gente y te dan cualquier consejo según tis necesidades."</p>
+                </div>
+            </div> 
+
+        </section>
+            
+    </main>
+    <!--FIN DEL MAIN-->
+
+    <!--comienzo del aside--> 
+    <aside >   
+
+        <section class="facilidades"><!--seccion de facilidades(como pagar, como comprar, envios  y instagram)-->
+
+            <div id="comoComprar">
+                <a  class="facilidades__div" href="secundariosHtml/comoComprar.html">
+                    <div class="facilidades__contImage" id="iconoComoComprar">
+                        <img class="imagenFacilidades" src="Imagenes/iconos/IconoComoComprar.png"  width="50px"  alt="iconoComoComprar" >
+                    </div>
+
+                    <div class="facilidades__divTexto" id="textComoComprar">
+                        <h3 id="tex" >COMO COMPRAR</h3>
+                    </div>
+                </a>
+            </div >
+
+            <div id="comoPagar">
+                <a  class="facilidades__div" href="secundariosHtml/comoPagar.html">
+                    <div class="facilidades__contImage" id="iconoComoPagar">
+                        <img class="imagenFacilidades" src="Imagenes/iconos/IconoComoPagar.png"  width="50px"  alt="iconoComoPagar" >
+                    </div>
+
+                    <div class="facilidades__divTexto" id="textComoPagar">
+                        <h3 id="tex" >COMO PAGAR</h3>
+                    </div>
+                </a>
+            </div >
+
+            <div  id="envios">
+                <a class="facilidades__div" href="secundariosHtml/envios.html">
+                    <div class="facilidades__contImage">
+                        <img class="imagenFacilidades" src="Imagenes/iconos/iconoEnvio.png"  width="50px"  alt="iconoEnvios" >
+                    </div>
+
+                    <div class="facilidades__divTexto">
+                        <h3 id="tex" >ENVIOS</h3>
+                    </div>
+                </a>
+            </div>
+                
+            <div id="seguinosEnInstagram">
+                <a class="facilidades__div" href="https://www.instagram.com/vidya.articulos.sustentables/">
+                    <div class="facilidades__contImage">
+                        <img class="imagenFacilidades" src="Imagenes/iconos/iconoInstagram.png"  width="50px"  alt="seguinosEnInstagram" >
+                    </div>
+
+                    <div class="facilidades__divTexto">
+                        <h3 id="tex" >SEGUINOS EN INSTAGRAM</h3>
+                    </div>
+                </a>
+            </div>
+
+        </section> 
+    
+        <section class="divVideo"><!--seccion de video-->
+        
+            <video class="aside__video" src="videos/videoOlas.mp4" alt="video de olas" autoplay loop></video>
+            
+        </section>
+
+        <!--boton whatsApp modo fixd , te envia directoi al chat con una pestaña nueva-->
+        <a class='fixed-whatsapp' href="https://api.whatsapp.com/send?phone=541133554248'">
+        </a>
+
+    </aside>   
+    <!--fin del aside-->
+
+    <!--INICIO DEL FOOTER-->
+    <footer>
+
+        <div class="footer__div">
+
+            <!--Mapa de Sitio-->
+            <div class="footer__mapaDeSitio">
+                <h3>MAPA DE SITIO</h3>
+                <ul class="footer__navegador">
+                    <li><a class="footer__items" href="principalesHtml/tienda.html" >TIENDA</a></li>
+                    <li><a class="footer__items" href="principalesHtml/lifestyle.html">LIFESTYLE</a></li>
+                    <li><a class="footer__items" href="principalesHtml/nosotros.html">NOSOTROS</a></li>
+                    <li><a class="footer__items" href="principalesHtml/contacto.html">CONTACTO</a></li>
+                    <li><a class="footer__items" href="secundariosHtml/legales.html">LEGALES</a></li>
+                </ul>
+            </div>  
+
+            <!-- newsletter con input e-mail -->
+            <div class="footer__newsletter">
+                <h3>NEWSLETTER</h3> 
+                <input type="email" placeholder="ingrese su e-mail"> 
+                <input class="footer__btn" type="submit" value="Enviar" >
+            </div>
+
+        </div>
+        
+        <h4 class="footer__copyright">© 2021 Vidya Online</h4>
+        
+    </footer>
+    <!--FIN DEL FOOTER-->
+   <!-- <script src="miMain.js"></script>-->
+  <script src="../miMain.js"></script>
+</body>
+
+</html>

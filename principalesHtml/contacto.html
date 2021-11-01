@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Más de 300 Productos Sustentables, Saludables y de Excelente Calidad. Venta por Unidad. Venta a Mayoristas. Encontrá en Vidya Productos Para Un Consumo Consciente.">
+    <meta name="keywords"  content="PRODUCTOS, SUSTENTABLES, VENTA">
+    <title>Contacto - VIDYA - Venta de productos SUSTENTABLES</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+
+</head>
+
+<body class="ContainerBody">
+   
+  <!--INICIO DEL HEADER--> 
+  <header id="headerContacto">
+    <!--logo-->
+    <a href="../index.html" class="nav__brandLink">
+        <img class="logoContacto" src="../Imagenes/logoHorizontal.png" alt="logo">
+    </a>
+
+  </header>
+  <!--FIN DEL HEADER-->
+
+  <!--inicio del main-->
+  <main>
+    <!-- Bootstrap 5 formulario de contacto -->
+    <div class="container-fluid px-5 my-5">
+
+      <div class="row justify-content-center">
+
+        <div class="col-xl-10">
+
+          <div class="card border-0 rounded-3 shadow-lg overflow-hidden">
+
+            <div class="card-body p-0">
+
+              <div class="row g-0">
+
+                <div class="col-sm-6 d-none d-sm-block bg-image"></div>
+                <div class="col-sm-6 p-4">
+                  <div class="text-center">
+                    <div class="h3 fw-light">CONTACTO</div>
+                    <p class="mb-4 text-muted">Complete el Formulario y nos comunicaremos a la brevedad. Muchas Gracias</p>
+                  </div>
+    
+                  <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+    
+                    <!-- Nombre -->
+                    <div class="form-floating mb-3">
+                      <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+                      <label for="name">Nombre</label>
+                      <div class="invalid-feedback" data-sb-feedback="name:required">El Nombre es requerido</div>
+                    </div>
+    
+                    <!-- Email -->
+                    <div class="form-floating mb-3">
+                      <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                      <label for="emailAddress">Email</label>
+                      <div class="invalid-feedback" data-sb-feedback="emailAddress:required">El email es requerido</div>
+                      <div class="invalid-feedback" data-sb-feedback="emailAddress:email">El email no es valido</div>
+                    </div>
+    
+                    <!-- ingreso del mensaje -->
+                    <div class="form-floating mb-3">
+                      <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required" ></textarea>
+                      <label for="message">Mensaje</label>
+                      <div class="invalid-feedback" data-sb-feedback="message:required">El mensaje es requerido.</div>
+                    </div>
+    
+                    <!-- mensaje de envio -->
+                    <div class="d-none" id="submitSuccessMessage">
+                      <div class="text-center mb-3">
+      
+                      </div>
+                    </div>
+    
+                    <!-- error mensaje -->
+                    <div class="d-none" >
+                      <div class="text-center text-danger mb-3">Error al enviar!</div>
+                    </div>
+    
+                    <!-- boton enviar -->
+                    <div class="d-grid">
+                      <button class="" id="submitButton" type="submit">Enviar
+                      </button>
+                    </div>
+                  </form>
+                  <!-- fin del formulario -->
+    
+                </div>
+
+              </div>
+    
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main> 
+    <!--fin del main-->
+
+  <!--comienzo del aside--> 
+  <aside>
+      <section class="facilidades"><!--seccion de facilidades(como pagar, como comprar, envios  y instagram)-->
+
+          <div id="comoComprar">
+              <a  class="facilidades__div" href="../secundariosHtml/comoComprar.html">
+                  <div class="facilidades__contImage" id="iconoComoComprar">
+                      <img class="imagenFacilidades" src="../Imagenes/iconos/IconoComoComprar.png"  width="50px"  alt="iconoComoComprar" >
+                  </div>
+
+                  <div class="facilidades__divTexto" id="textComoComprar">
+                      <h3 id="tex" >COMO COMPRAR</h3>
+                  </div>
+              </a>
+          </div >
+
+          <div id="comoPagar">
+              <a  class="facilidades__div" href="../secundariosHtml/comoPagar.html">
+                  <div class="facilidades__contImage" id="iconoComoPagar">
+                      <img class="imagenFacilidades" src="../Imagenes/iconos/IconoComoPagar.png"  width="50px"  alt="iconoComoPagar" >
+                  </div>
+
+                  <div class="facilidades__divTexto" id="textComoPagar">
+                      <h3 id="tex" >COMO PAGAR</h3>
+                  </div>
+              </a>
+          </div >
+
+          <div  id="envios">
+              <a class="facilidades__div" href="../secundariosHtml/envios.html">
+                  <div class="facilidades__contImage">
+                      <img class="imagenFacilidades" src="../Imagenes/iconos/iconoEnvio.png"  width="50px"  alt="iconoEnvios" >
+                  </div>
+
+                  <div class="facilidades__divTexto">
+                      <h3 id="tex" >ENVIOS</h3>
+                  </div>
+              </a>
+          </div>
+              
+          <div id="seguinosEnInstagram">
+              <a class="facilidades__div" href="https://www.instagram.com/vidya.articulos.sustentables/">
+                  <div class="facilidades__contImage">
+                      <img class="imagenFacilidades" src="../Imagenes/iconos/iconoInstagram.png"  width="50px"  alt="seguinosEnInstagram" >
+                  </div>
+
+                  <div class="facilidades__divTexto">
+                      <h3 id="tex" >SEGUINOS EN INSTAGRAM</h3>
+                  </div>
+              </a>
+          </div>
+
+      </section> 
+
+      <!--boton whatsApp modo fixd , te envia directoi al chat con una pestaña nueva-->
+      <a class='fixed-whatsapp' href="https://api.whatsapp.com/send?phone=541133554248'">
+      </a>
+
+  </aside> <!--fin del aside-->   
+ 
+  <!--INICIO DEL FOOTER-->
+  <footer>
+
+    <div class="footer__div">
+
+      <!--Mapa de Sitio-->
+      <div class="footer__mapaDeSitio">
+          <h3>MAPA DE SITIO</h3>
+          <ul class="footer__navegador">
+              <li><a class="footer__items" href="tienda.html" >TIENDA</a></li>
+              <li><a class="footer__items" href="lifestyle.html">LIFESTYLE</a></li>
+              <li><a class="footer__items" href="nosotros.html">NOSOTROS</a></li>
+              <li><a class="footer__items" href="contacto.html">CONTACTO</a></li>
+              <li><a class="footer__items" href="../secundariosHtml/legales.html">LEGALES</a></li>
+          </ul>
+      </div>  
+
+      <!-- newsletter con input e-mail -->
+      <div class="footer__newsletter">
+          <h3>NEWSLETTER</h3> 
+          <input type="email" placeholder="ingrese su e-mail"> 
+          <input class="footer__btn" type="submit" value="Enviar" >
+      </div>
+
+    </div>
+    
+    <h4 class="footer__copyright">© 2021 Vidya Online</h4>
+      
+  </footer>
+  <!--FIN DEL FOOTER-->
+ 
+</body>
+</html>

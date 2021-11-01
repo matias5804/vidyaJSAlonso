@@ -1,0 +1,158 @@
+aside{
+    /*inicio seccion facilidades*/
+    .facilidades{
+        margin-top:20px ;
+        margin-bottom: 20px;
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+                    "comoComprar  comoPagar"
+                    "envios       seguiniosEnInstagram"; 
+        grid-template-columns: 170px 170px;
+        grid-template-rows: 85px 85px;
+        justify-content: center;
+        color: $colorPri;
+
+        &__div{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            width: 160px;
+            height: 80px;
+            
+
+            .facilidades__contImage{
+                padding-top:15px;
+                width: 80px;
+                height: 80px;
+
+                .imagenFacilidades{
+                    width: 50px;
+                    height: 50px;
+                    transition: 0.2s linear;
+                }
+
+                .imagenFacilidades:hover{
+                    transform: scale(1.5, 1.5) rotate(9deg)
+                }
+            }
+
+            .facilidades__divTexto{
+                background-color: $colorTer ;
+                font-size:x-small;
+                width: 80px;
+                height: 80px;
+                padding: 1rem;
+                border-radius: 30px;
+                @include flex (row,center,center);
+            }
+        }
+
+        #iconoComoComprar{
+            order: 2;
+        }
+
+        #textComoComprar{
+            order: 1;
+        }
+
+        #iconoComoPagar{
+            order: 2;
+        }
+
+        #textComoPagar{
+            order: 1;
+        }
+
+        #tex{
+            font-size: $font-size-s;
+            color: $colorPri;
+        }
+    }/*fin de la seccion de facilidades*/
+
+    .aside__video{
+        width: 100%;
+        height:auto;
+    }
+
+    /*inico de los estilos del boton de whats app*/
+    .fixed-whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        z-index: 9999;
+    }
+    
+    .fixed-whatsapp:before {
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 34px 34px;
+        background-position: center center;
+        width: 50px;
+        height: 50px;
+        background-image: url(https://raw.githubusercontent.com/matias5804/vidyaCoder/main/Imagenes/iconos/whatsapp.png);
+        background-color: #50b154;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 100%;
+        box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, .12), 0 1px 1px 0 rgba(0, 0, 0, .24);
+    }  
+
+    .fixed-whatsapp:hover{
+        transform: scale(1.2);
+        transition-duration: 0.4s;
+    }
+}
+
+/*inicio de los estilos del aside a partir de los 600px*/
+@media (min-width:600px) {
+
+    /*inicio de facilidades en mas de 600px*/
+    aside{
+
+        .facilidades{
+            display: flex;
+            margin-top: 20px ;
+            margin-bottom: 20px;
+            height: 200px;
+            width: 100%;
+            justify-content: space-around;
+
+            &__div{
+                display: block;
+                width: 100px;
+                height: 200px;
+
+                .facilidades__contImage{
+                    width: 100px;
+                    height: 100px;
+                
+                    .imagenFacilidades{
+                        width: 70px;
+                        height: 70px;
+                    }
+                }
+                
+                .facilidades__divTexto{
+                    background-color: $colorTer;
+                    font-size:$font-size-m;
+                    width: 100px;
+                    height: 100px;
+                    padding: 1rem;
+                
+                    @include flex (row,center,center);
+
+                    #tex{/*cambia el tamaño y el color del texto de facilidades*/
+                        font-size: $font-size-m;
+                        color: $colorPri;
+                    }
+                }
+            }
+        }
+    }
+}
+/*fin de los estilos del aside */
+        

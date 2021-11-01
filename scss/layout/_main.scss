@@ -1,0 +1,957 @@
+/*comienzan los estilos de novedades*/
+.novedades{
+    margin-top: 10px;
+
+    .novedades__titulo{
+        background-color: $colorSec;
+        text-align: center;
+        color:$colorPri;
+    }
+
+    .novedades__div{
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+
+        .novedades__contenedorArticulo:hover{/*animacion de sombra sobre el articulo*/
+            box-shadow: 6px 6px 10px  rgba(0,0,0,0.47);
+            transition-duration: 0.4s; 
+        }
+
+        .novedades__contenedorArticulo{
+            width: 160px;
+            height: 260px;
+            margin: 10px 5px 20px 5px;
+            background-color: rgba(231, 231, 231, 0.63);
+            display: flex;
+            box-sizing:border-box ;
+            flex-direction: column;            
+            text-align: start;
+
+            .novedades__imagen{
+                box-sizing: border-box;
+                width: 100%;
+            }
+            
+            .novedades__tituloProducto{
+                font-size: $font-size-m;
+                color:$colorPri;
+                margin-top: 5px;
+            }
+
+            .novedades__precio{
+                margin-top: 5px;
+                font-size: $font-size-m;
+                color:$colorPri;
+            }
+        }
+
+        .novedades__divImagen:hover img{
+            transform:scale(1.1);
+            transition: 0.5s ;
+        }
+
+        .novedades__divImagen{
+            overflow:hidden;
+        }
+    }
+
+
+    .novedades__divProPreBot{
+        padding: 0px 10px 0px 10px;
+    }
+}/*fin los estilos de novedades*/
+
+/*comienzo de estilos de opiniones*/
+.opiniones{
+    &__titulo{
+        background-color: $colorTer;
+        color: $colorPri;
+        text-transform:uppercase;
+    }
+
+    &__div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 10px 0px 10px;
+        justify-content: center;
+      
+        .opiniones__contenedor{
+            width: 270px;  
+            border: $colorPri 3px dashed;
+            margin: 20px;
+            padding: 10px;
+
+            .opiniones__parrafo{
+                font-style: italic;
+            }
+        }
+    }  
+
+    &__verMAs{
+        margin: 10px;
+    }
+}/*fin de los estilos de opiniones*/
+
+/*comienzan los estilos de tienda del index*/
+.tienda{
+    width: 100%;margin-top: 20px;
+    display: block;
+    justify-content: center;
+
+    &__titulo{
+        background-color: $colorTer;
+        color: $colorPri;
+    }
+
+    &__container{
+        position: relative;
+        width: 100%;
+    }
+
+    &__imagen{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay { /*se muestra superpuesto a la imagen de tienda */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute; 
+        bottom: 0; 
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /* Black see-through (negro transparente)*/
+        color: #f1f1f1; 
+        width: 100%;
+        height: 100%;
+        transition: .5s ease;
+        opacity:0;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 10px;
+    }
+    
+    &__container:hover .overlay {
+        opacity: 1;
+    }
+}/*finaliza la seccion de tienda del index */
+
+/*comienzan los estilos de contacto (bootstrap)*/
+.bg-image {
+    background-image: url(https://raw.githubusercontent.com/matias5804/vidyaCoder/main/Imagenes/fotoContacto.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tituloOscuro{ 
+    text-align: center;
+    color: $colorPri;
+    margin: 20px;
+    background-color: $colorSec;
+    font-weight: 500;
+}
+
+.formulario__imput{
+    width: 100%;
+}
+
+/*finalizan los estilos de contacto*/
+
+/*inicio de los estilos de lifestyle y nosotros */
+.divNota__masInfo{
+    text-align: center;
+    margin: 5%;
+}
+
+.imagenPortada{
+    width: 100%;
+}
+
+.divSubYTitulo{
+    margin: 3%;
+    font-size: large;
+}
+ 
+.divParrafo{
+    text-align: left;
+    margin: 5%;
+}  
+
+.textoArticulos{
+    font-size: $font-size-m;
+    padding: 30px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    line-height: 30px;
+}/*Finaliza los esilos de lifestyle y nosotros*/
+
+/*inicio de los estilos de la pagina tienda*/
+.mainTienda{
+
+    .tienda__titulo{
+        font-size: $font-size-xl;
+        background-color: $colorTer;
+        color: $colorPri;
+        text-transform:uppercase;
+    }    
+
+    .gridTienda{
+        display: grid;  
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:"producUno    producDos" 
+                            "producTres    producCuatro"
+                            "producCinco  producSeis" 
+                            "producSiete   producOcho"
+                            "producNueve    producDiez" 
+                            "producOnce    producDoce" ;
+        justify-items: center;
+
+        &__card{
+            width: 160px;
+            height: 260px;
+            margin: 10px 5px 20px 5px;
+            background-color: rgba(231, 231, 231, 0.63);
+            display: flex;
+            box-sizing:border-box ;
+            flex-direction: column;            
+            text-align: start;
+        }
+
+        .gridTienda__divImagen:hover img{
+            transform:scale(1.1);
+            transition: 0.5s ;
+        }
+        .gridTienda__divImagen{
+            overflow: hidden;
+        }
+
+        .gridTienda__divProPreBot{
+            padding: 0px 10px 0px 10px;
+        }
+
+        &__card:hover{/*animacion de sombra sobre el articulo*/
+            box-shadow: 6px 6px 10px  rgba(0,0,0,0.47); 
+            transition-duration: 0.4s; 
+        }
+
+        &__imagen{
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        &__tituloProducto{
+            font-size: $font-size-m;
+            color:$colorPri;
+            margin-top: 5px;
+        }
+
+        &__precio{
+            margin-top: 5px;
+            font-size: $font-size-m;
+            color:$colorPri;
+        }
+
+        #producUno {
+            grid-area: producUno;
+        } 
+
+        #producDos{
+            grid-area: producDos;
+        }   
+
+        #producTres{
+            grid-area: producTres;
+        }
+
+        #producCuatro{
+            grid-area: producCuatro;
+        }
+
+        #producCinco{   
+            grid-area: producCinco;
+        } 
+
+        #producSeis{
+            grid-area: producSeis;
+        }
+
+        #producSiete{
+            grid-area: producSiete;
+        }
+
+        #producOcho{
+            grid-area: producOcho;
+        }
+    }
+}/*FIN de los estilos de la pagina tienda */
+
+/*inicio de los estilos de Producto*/
+.contenedorMenuBreadcrumbs{
+    position: absolute;
+    width: 100%;
+    top: 120px;
+    left: 10px;
+    opacity: .6;
+    text-align: start;
+    font-size: small;
+}
+
+ul.menuBreadcrumb {
+    padding: 3px 10px;
+    list-style: none;
+    background-color: #eee;
+}
+  
+ul.menuBreadcrumb li {/* display  en lista una al lado del otro */
+    display: inline;
+    font-size: small;
+}
+  
+ul.menuBreadcrumb li+li:before {/* separo los items y les doy color despues de li ??*/
+    padding: 3px;
+}
+  
+ul.menuBreadcrumb li a {/* agregar color a los links */
+    color:rgb(104, 104, 104);
+    font-weight: bold;
+    text-decoration: none;
+}
+  
+ul.menuBreadcrumb li a:hover {/* agrega subrayado a el link cuando paso con el cursor */
+    color:black;
+    text-decoration: underline;
+}
+
+#contenedorProducto{
+    display: flex;
+    flex-direction: column;
+}
+
+.containerImagenes{/*contenedor que tiene las dos imagenes que luegoi se van a transformar*/
+    position: relative;
+    height: 290px;
+    width: 290px;
+    margin: 50px 20px;
+    float: left;
+}
+
+.divImagenProductos{
+    box-sizing: border-box;
+}
+
+.divImagenProducto{
+    padding:  0px 10px 10px 10px;
+}
+
+.divPrecioProducto{
+    padding: 25px;
+    text-align: start;
+    font-size: x-large;
+}
+
+.divAgregarCarrito{
+    margin-top: 20px;
+}
+
+.botonAgregarCarrito{/*boton añadir a carrito*/
+    text-decoration: none;
+    padding: 12px;
+    font-weight: 600;/*ancho de le letra*/
+    color:white;
+    background-color: $colorPri;
+    border-radius: 6px;
+}
+
+.selectCarrito{
+    font-size: x-large;
+}
+
+.divTextoProducto{
+    margin: 30px 25px 30px 25px;
+    text-align: start;
+    font-size: large;
+}
+
+.divTextoSabias{
+    border: 1px solid;
+    margin: 0px 30px 25px 30px;
+    font-size: large;
+}
+
+.imagenProducto{
+    width: 100%;
+}
+
+.textoSabias{
+    margin: 15px 25px 15px 25px;
+}/*fin de los estilos de producto*/
+
+/* Inicio de lo estilos del Call to Action*/
+.callToAction{
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    border: 10px solid $colorWhite;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+   
+    &__img{/*la imagen se ajusta al div*/
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+.mask {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+
+.callToAction h1 {
+    text-transform: uppercase;
+    color: $colorPri;
+    text-align: center;
+    position: relative;
+    font-size: $font-size-xl;
+    background:$colorSec;
+    margin: 20px 0 0 0
+}
+
+.callToAction p {
+    font-size: $font-size-xl;
+    position: relative;
+    color: $colorPri;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+
+.callToAction a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: $colorPri;
+    color: $colorWhite;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+}
+  
+.callToAction__img{
+    transition: all 0.2s linear;
+}
+
+.callToAction .mask {
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background-color: rgba(247, 236, 223, 0.537); 
+    transition: all 0.4s ease-in-out;
+}
+
+.callToAction h1 {
+    transform: translateY(-100px);
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.callToAction p {
+    transform: translateY(100px);
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+.callToAction a.info {
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.callToAction:hover .mask {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.callToAction:hover h1,
+.callToAction:hover p,
+.callToAction:hover a.info {
+    filter: alpha(opacity=100);
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.callToAction:hover p {
+    transition-delay: 0.1s;
+}
+
+.callToAction:hover a.info {
+    transition-delay: 0.2s;
+}/*fin de los estilos de CALL TO ACTION*/
+
+/*estilos de la pagina 404 ERROR (carrito de compras y buscador)*/
+
+////////////////////MODALLLLL CARRITOO
+.tituloCarrito{
+    font-size: large;
+    background-color:$colorSec ;
+}
+
+.header-popop{
+    display: flex;
+    font-size: large;
+    background-color:$colorSec ;
+    justify-content: space-between;
+    padding: .5em;
+}
+
+
+.divCarrito{
+    border: 1px solid;
+    width: 360px;
+    height: auto;
+    margin: 0 auto;
+    display: none;
+}
+
+.tablaCarrito{
+    border: 1px solid red;
+    width: 100%;
+}
+
+.footerCarrito{
+    border: solid 1px;
+}
+////////////////////////////////////////////////////////////////
+
+
+.linkError{
+    width: 100%;
+    height: 100%;
+}
+
+.texError{
+    font-size: 60px;
+    color:black;   
+    margin-top: 80px;                           
+}
+
+.mainCarrito{/*es para que el footer se quede abajo cuando no hay suficiente contenido para ocupar todo el alto de la pantalla*/
+    min-height: calc(100vh - 407px);
+}
+
+/*inicio de los estilos de sesion */
+input, textarea, button{
+    margin: 5px 0 12px 0;
+}
+
+#contenedorSesion {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+
+
+    .divCentralSesion {
+        max-width: 320px;
+        width: 100%;
+
+        #login {
+            width: 100%;
+            padding: 50px 30px;
+            margin-bottom: 50px;
+            background-color: $colorTer;
+            box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+            border-radius: 3px 3px 3px 3px;
+            box-sizing: border-box;
+
+            .tituloSesion {
+                font-size: 250%;
+                color:$colorPri;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .pie-form {
+                font-size: 90%;
+                text-align: center;    
+                margin-top: 15px;
+            }
+
+            .pie-form a {
+                display: block;
+                text-decoration: none;
+                color: $colorPri;
+                margin-bottom: 3px;
+            }
+
+            .pie-form a:hover {
+                color: $colorPri;
+            }
+        }
+
+        #login input {
+            font-family: 'Overpass', sans-serif;
+            font-size: 110%;
+            color:$colorPri;
+            display: block;
+            width: 100%;
+            height: 40px;
+            margin-bottom: 10px;
+            padding: 5px 5px 5px 10px;
+            box-sizing: border-box;
+            border-color: $colorPri;
+            border: none;
+            border-radius: 3px 3px 3px 3px;
+        }
+
+        #login button {
+            font-size: 110%;
+            color:$colorPri;
+            width: 100%;
+            height: 40px;
+            border: none;
+            border-radius: 3px 3px 3px 3px;
+            background-color: $colorSec;
+            margin-top: 10px;
+        }
+
+        #login button:hover {
+            background-color:$colorPri;
+            color:$colorTer;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: $colorSec;
+            margin-bottom: 3px;
+        }
+
+        a:hover {
+            color: $colorPri;
+        }
+    }
+}
+/*fin de los estilos de sesion*/
+
+/*inicio de los estilos de medios de pago*/
+.imgMediosPagos{
+    width: 100% ;
+    height: auto;
+}/*Fin de los estilos de medios de pago*/
+
+/*fin de los estilos hasta 599px*/
+
+/*inicio de los estilos a partir de los 600px*/
+@media (min-width:600px) { 
+    /*comienzo de estilos de opiniones*/
+    .opiniones{
+
+        &__div{
+            flex-direction: row;
+            justify-content: space-around;
+    
+            .opiniones__parrafo{
+                font-size: $font-size-l;
+            } 
+        }  
+    }/*fin de los estilos de opiniones*/
+
+    /*inicio de tienda del index- cambia a uno al lado del otro*/
+    .tienda__div{
+        display: flex;
+    } /*fin de la tienda del index*/
+   
+    /*comienzan los estilos de nosotros*/
+    .imagenNota{
+        width: 100%;
+        height: auto;
+    }
+
+    .textoArticulos{
+        font-size: large;
+        padding: 30px;
+        word-spacing: 1.5px;
+        letter-spacing: 1px;
+        line-height: 40px;
+    }
+
+    /*inicio de los estilos de la pagina de tienda en mas de 600px*/
+    .mainTienda{
+
+        .gridTienda{ 
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+                "producUno    producDos     producTres"
+                "producCuatro producCinco   producSeis" 
+                "producSiete  producOcho    producNueve"   
+                "producDiez   producOnce    producDoce" ; 
+            justify-items: center;
+        }
+    }/*FIN de los estilos de la pagina de tienda hasta 999px*/
+   
+    /*comienzan los estilos de contacto en mas de 600px*/
+    .divContactoImput{
+        display: flex;
+        padding: 50px 10px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .formularioContacto{
+        width: 300px;
+    }
+
+
+
+
+
+/*finalizan los estilos de contacto y de los estilos de hasta 999px*/
+
+   /*inicio de los estilos de producto*/
+    .contenedorMenuBreadcrumbs{ /*cambia el tamaño de la letra*/  
+        position: absolute;
+        font-size: medium; 
+    }
+
+    #contenedorProducto{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .contenedorProductoPrecio{
+        display: flex;
+        margin: 50px 20px 0px 20px;
+    }
+
+    #imagenProducto{
+        width: 50%;
+        height: auto;  
+    }
+
+    .divPrecioProducto{
+        width: 50%;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        justify-content: start;
+        font-size: 1.8rem;
+    }
+
+    #textoProducto{
+        font-size: 1.5rem;
+    }
+
+    #textoSabias{
+        font-size: x-large;
+        font-style: italic;
+        padding: 2rem;
+    }
+
+    .divAñadirCarrito{
+        margin-top: 1rem;
+    }
+
+    .divTextoProducto{
+        margin: 30px 25px 30px 25px;
+        text-align: start;
+        font-size: large;
+    }
+
+    .divTextoSabias{
+        width: auto;
+        height: auto;
+    }
+
+    .botonAñadirCarrito{
+        font-size: large;
+    }/*fin de los estilos de Producto en + de 600px y hasta 999px*/
+
+    /*comienzan los estilos de nosotros*/ 
+    .textoArticulos{
+        font-size: large;
+        padding: 30px;
+        word-spacing: 1.5px;
+        letter-spacing: 1px;
+        line-height: 35px;
+    }
+
+    /*inicio de los estilos de medios de pago*/
+    .divMediosPagos{
+        width: 600px ;
+        height: auto;
+        display: block;
+        margin: auto;
+    }  /*Fin de los estilos de medios de pago*/
+
+    /*inicio de los estilos call to action en mas de 600px cambios en tipografias y posicionamiento*/
+    .callToAction{
+        height: 300px;
+    }
+
+    .mask{
+        height: 300px;
+    }
+
+    .callToAction h1 {
+        margin: 30px 0 30px 0;
+        font-size: $font-size-xxl;
+    }    
+
+    .callToAction a.info{
+        margin-top: 20px;
+    }
+
+    .callToAction p {
+        font-size: xx-large;
+    } /*fin de los estilos call to action*/
+
+}/*fin de los estilos desde 600px*/
+
+/*inicio de los estilos a partir de los 800px*/
+@media (min-width:800px){
+
+    .divTextoProducto{ /*inicio de los estilos de producto a partir de los 800px*/
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+
+    .divTextoSabias{
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+}/*fin de los estilos de producto a partir de los 800px*/
+
+/*inicio de los estilos a partir de los 1000px*/
+@media (min-width:1000px){
+
+    /*comienzan los estilos de novedades en mas de 1000px*/
+    .novedades{
+
+        .novedades__div{
+        
+            .novedades__contenedorArticulo{
+            width: 192px; /* + 20% que en la version anterior*/
+            height: 290px;
+            }
+        }
+    }/*fin los estilos de novedades*/
+
+    /*inicio de los estilos de la pagina de (contacto) en mas de 1000px modifiCADO POR BOOTSTRAP*/
+    .tituloOscuro{
+        position: relative !important;
+        top:30px !important;
+        left: 0 !important;
+    }
+
+    #logoContacto{
+        position: relative !important;
+        top:0 !important;
+        left: 0 !important;
+    }/*fin los estilos de contacto*/
+
+    /*comienzan los estilos de nosotros*/
+    .textoArticulos{
+        font-size: x-large;
+        letter-spacing: 1.5px;
+        margin: 50px;
+    }
+
+    .divSubYTitulo{
+        font-size: x-large;
+    }
+    /*finalizan los estilos de nosotros*/
+
+    
+    /*inicio de los estilos la pagina de tienda*/
+    .mainTienda{
+
+        .gridTienda{
+           
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: "producUno    producDos     producTres    producCuatro"
+                                "producCinco  producSeis    producSiete   producOcho" ; 
+            justify-items: center;     
+            
+            &__container{
+                width: 192px; /* + 20% que en la version anterior*/
+                height: 290px;
+            }
+        }
+    } /*fin de los estilos de la tienda*/
+ 
+    /*inicio de los estilos de Producto en + de 1000px*/    
+    #contenedorProducto{
+        align-items: center;
+    }
+
+    .imagenProducto{
+        width: 400px;
+        justify-content: flex-end;
+    }
+
+    .divImagenProducto{
+        width: 500px;
+    }
+
+    .textosProductos{
+        width: 1000px;
+    }
+
+    .botonAñadirCarrito{
+        font-size: large;
+    }
+
+    .contenedorProductoPrecio{
+        width: 1000px;
+    }
+
+    .contenedorMenuBreadcrumbs{
+        top: 140px;
+        z-index: 2; /* hace que este por delante del menu */
+    }/*fin de los estilos de Producto en + de 1000px*/
+
+
+    /*inicio de los estilos call to action en mas de 1000px cambios en tipografias y posicionamiento*/
+    .callToAction{
+        height: 350px;
+    }
+
+    .mask{
+        height: 350px;
+    }
+
+    .callToAction h1 {
+        margin: 30px 0 30px 0;
+        font-size: $font-size-xxl;
+    }    
+
+    .callToAction a.info{
+        margin-top: 20px;
+    }
+
+    .callToAction p {
+        font-size: xx-large;
+    } /*fin de los estilos call to action*/
+}

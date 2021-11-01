@@ -1,0 +1,123 @@
+[
+    {
+        "precio": 340,
+        "id": 1,
+        "title": "Desmaquillantes",
+        "thumbnailUrl": "../Imagenes/ImagenesArticulos/discosDesmaquillantes.jpeg",
+        "enlace": "../productosHtml/discosDesmaquillantes.html"
+    },
+    
+    {
+        "precio": 315,
+        "id": 2,
+        "title": "Origami Bags",
+        "thumbnailUrl": "../Imagenes/ImagenesArticulos/origamiBags.jpeg",
+        "enlace": "../productosHtml/origamiBags.html"
+    },
+
+    {
+        "precio": 990,
+        "id": 3,
+        "title": "Wraps Eco",
+        "thumbnailUrl": "../Imagenes/ImagenesArticulos/wrapSeco.jpeg",
+        "enlace": "../productosHtml/wrapsEco.html"
+    },
+
+    {
+        "precio": 569,
+        "id": 4,
+        "title": "Pack Bags",
+        "thumbnailUrl": "../Imagenes/ImagenesArticulos/packBags.jpeg",
+        "enlace": "../productosHtml/packBags.html"
+    },
+
+    {
+        "precio": 570,
+        "id": 5,
+        "title": "Set Velas",
+        "thumbnailUrl": "../Imagenes/ImagenesArticulos/setVelas.jpeg",
+        "enlace": "../productosHtml/setVelas.html"
+    },
+    {
+        "precio": 270,
+        "id": 6,
+        "title": "Limpieza Corportal",
+        "thumbnailUrl": "../Imagenes/ImagenesArticulos/setLimpiezaDeCuerpo.jpeg",
+        "enlace": "../productosHtml/setLimpiezaCuerpo.html"
+    },
+    {
+        "precio": 1360,
+        "id": 7,
+        "title": "Cepillo de Pelo",
+        "thumbnailUrl": "../Imagenes/ImagenesArticulos/cepilloPelo.jpeg",
+        "enlace": "../productosHtml/cepilloDePelo.html"
+    },
+    {
+        "precio": 350,
+        "id": 8,
+        "title": "Set Cleaner",
+        "thumbnailUrl": "../Imagenes/ImagenesArticulos/setCleaner.jpeg",
+        "enlace": "../productosHtml/setCleaner.html"
+    },
+    {
+        "precio": 690,
+        "id": 9,
+        "title": "Set Picnic",
+        "thumbnailUrl": "../Imagenes/ImagenesArticulos/setPicnic.jpeg",
+        "enlace": "../productosHtml/setPicnic.html"
+    },
+    {
+        "precio": 250,
+        "id": 10,
+        "title": "Filtro de Cáfe",
+        "thumbnailUrl": "../Imagenes/ImagenesArticulos/coffeeFiltro.jpeg",
+        "enlace": "../productosHtml/cafeFiltro.html"
+    },
+    {
+        "precio": 1550,
+        "id": 11,
+        "title": "Set Dientes Adulto",
+        "thumbnailUrl": "../Imagenes/ImagenesArticulos/setDientesAdulto.jpeg",
+        "enlace": "../productosHtml/setDientesAdultos.html"
+    },
+    {
+        "precio": 740,
+        "id": 12,
+        "title": "Peine de Cola",
+        "thumbnailUrl": "../Imagenes/ImagenesArticulos/peineCola.jpeg",
+        "enlace": "../productosHtml/peineCola.html"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]

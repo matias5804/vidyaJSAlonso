@@ -1,0 +1,58 @@
+/*inicio de los estilos del footerr*/
+footer{
+	
+    background-image: linear-gradient($colorPri,$colorSec);
+    color:$colorWhite;
+	
+	.footer__copyright{
+    	color: $colorPri;
+	}
+
+	.footer__newsletter{
+  		margin: 40px;
+	}
+
+	.footer__mapaDeSitio{
+		padding-top: 20px;
+
+		.footer__navegador{
+			margin: 10px;
+			text-decoration: none;
+		
+			.footer__items{
+				margin: 10px;
+				text-decoration: none;
+				color: $colorWhite;
+			}
+		}
+	}	
+}
+
+@media (min-width:1000px) {/*se ejecuta cuando el ancho tenga como minimo 1000px*/
+
+	footer{
+
+		.footer__copyright{
+			color:$colorPri;
+		}
+
+		.footer__div{
+			
+			display: flex;
+			flex-direction: row;
+			align-items: baseline;
+
+			.footer__mapaDeSitio{
+				padding-top: 20px;
+				width: 50%;
+				font-size: x-large;
+			}
+
+			.footer__newsletter{
+				font-size: x-large;
+				margin: 30px;
+				text-align: start;
+			}
+		}
+	}
+} /*fin de los estilos del footer*/ 

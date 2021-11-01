@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Más de 300 Productos Sustentables, Saludables y de Excelente Calidad. Venta por Unidad. Venta a Mayoristas. Encontrá en Vidya Productos Para Un Consumo Consciente.">
+    <meta name="keywords"  content="PRODUCTOS, SUSTENTABLES, VENTA">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+    <title>TIENDA - VIDYA - Venta de productos SUSTENTABLES</title>
+    
+    <link rel="stylesheet" href="../css/estilos.css">
+
+</head>
+
+<body class="ContainerBody">
+   
+    <!--INICIO DEL HEADER--> 
+    <header class="nav" id="nav__header">
+
+        <!--inicio del navegador-header (logo -menu - buscador - carrito - usuario)-->  
+        <nav class="nav__header" >
+            <!--logo-->
+            <div class="nav__divBrand">
+                <a href="../index.html" class="nav__brandLink">
+                    <img class="nav__logo" src="../Imagenes/logoHorizontal.png" alt="logo">
+                </a>
+            </div>
+
+            <!--botones del menu abrir y cerrar(ha,burguesa y cruz)-->
+            <div class=".nav__divButtons">
+                <a href="#nav__header" class="nav__menuMobile open">
+                    <img class="nav__img" src="../Imagenes/iconos/iconMenu.png" alt="boton abrir menu">
+                </a>
+
+                <a href="#" class="nav__menuMobile close">
+                    <img class="nav__img" src="../Imagenes/iconos/iconMenuCerrado.png"  alt="boton cerrar menu">
+                </a>
+            </div>
+
+            <!--buscador, usuario, carrito-->
+            <div class="nav__divIconos">
+
+                <a  href="../secundariosHtml/error.html" class="nav__iconLupa" >
+                    <img src="../Imagenes/iconos/lupaBuscador.svg"width="30" height="30"  alt="icon buscador">
+                </a>
+
+                <a href="../secundariosHtml/sesion.html" class="nav__iconUsuario">
+                    <img src="../Imagenes/iconos/logoUsuario.svg" width="30" height="30" alt="icon usuario" >
+                </a>
+
+                <div class="navbar-nav">
+                    <div class="d-flex justify-content-center mt-3">
+                        <a type="button"></a>
+                            <img class="img-fluid cartImg" src="../imagenes/cart.png" alt="cart"  width="30" height="30"  onclick="showPopUp()" />
+                        </a>   
+
+                    </div>
+                </div>
+
+            </div>    
+        </nav>
+        
+        <!--menu central (escondido en mobilefirst) -->  
+        <ul class="nav__container">
+            <li class="nav__item">
+                <a href="tienda.html" class="nav__link">TIENDA</a>
+            </li>
+            <li class="nav__item">
+                <a href="lifestyle.html" class="nav__link">LIFESTYLE</a>
+            </li>
+            <li class="nav__item">
+                <a href="nosotros.html" class="nav__link">NOSOTROS</a>
+            </li>
+            <li class="nav__item">
+                <a href="contacto.html" class="nav__link">CONTACTO</a>
+            </li>
+        </ul>
+
+    </header>
+    <!--FIN DEL HEADER-->
+    
+
+    <!--inicio del main --> 
+    <main class="mainTienda"> 
+       
+        <div>
+            <h1 class="tienda__titulo">TIENDA</h1>
+        </div>
+
+        <div id="popup" class="divCarrito">
+            <div class="header-popop">
+                <h4 class="tituloCarrito"> - Lista de Productos Agregados -</h4>
+                <a id="closePopup" onclick="closePopup()" href="#">X</a>
+            </div>
+            <table class="tablaCarrito">
+              <thead>
+                <tr>
+                  <th scozpe="col">#</th>
+                  <th scope="col">Articulo</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Acción</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody id="items"></tbody><!--donde van a imprimirse los items en el carrito -->
+              <tfoot id="footer-carrito"> 
+              </tfoot>
+            </table>
+        </div>
+
+        <template id="template-footer" ><!-- ACA es el footer del carrito dende falta el boton de finaliar compra con el alert detallada de la misma -->
+            <tr>
+                <th scope="row" colspan="2">Total productos</th>
+                <td>10</td>
+                <td></td>
+        
+            
+                <td class="font-weight-bold">$ <span></span></td> 
+            </tr>
+
+            <tr>
+                <th>  </th>  
+                <td></td>    
+                <td><button onclick="vaciarCarrito()" class="btn btn-danger btnVaFi" id="vaciar-carrito">
+                    Vaciar
+                </button></td>            
+                <td colspan="3"><button class="btn btn-danger btnVaFi" id="finalizar-compra" onclick="return confCompra()">
+                    Finalizar Compra
+                </button></td>         
+            </tr>
+        </template>
+    
+
+        <template id="template-carrito">
+            <tr>
+                <th scope="row"></th>
+                <td></td><!--se pinta la cantidad que viene de js-->
+                <td></td>
+                <td>
+                    <button class="btn-info">
+                        +
+                    </button>
+                    <button class="btn-danger">
+                        -
+                    </button>
+                </td>
+                <td>$ <span></span></td><!--se pinta el precio total que viene de js-->
+            </tr>
+        </template>
+        
+        <div class="gridTienda" id="contenedor-productos"></div><!--donde despues se pinta la tarjeta-->
+
+        <div id="productos"></div>
+
+        <template id="template-productos"><!--e navegador no lo lee pero si el explorador-->
+            <div class="gridTienda__card">
+
+                <a href="../productosHtml/discosDesmaquillantes.html">
+                    <div class="gridTienda__divImagen"> 
+                        <img class="gridTienda__imagen" src="../Imagenes/imagenesArticulos/discosDesmaquillantes.jpeg"  alt="imagen del producto Discos Desmaquillantes">
+                    </div> 
+                </a>
+
+                <div class="gridTienda__divProPreBot">
+                    <h3 class="gridTienda__tituloProducto">Desmaquillantes</h3>
+                    <p class="gridTienda__precio">$ <span></span></p>   
+                    <button class="btnComprar">
+                        Agregar al Carrito
+                    </button>
+                </div>
+
+            </div>
+        </template>    
+
+    </main><!--FIN DEL MAIN-->
+
+    <!--comienzo del aside--> 
+    <aside>
+        <section class="facilidades"><!--seccion de facilidades(como pagar, como comprar, envios  y instagram)-->
+
+            <div id="comoComprar">
+                <a  class="facilidades__div" href="../secundariosHtml/comoComprar.html">
+                    <div class="facilidades__contImage" id="iconoComoComprar">
+                        <img class="imagenFacilidades" src="../Imagenes/iconos/IconoComoComprar.png"  width="50px"  alt="iconoComoComprar" >
+                    </div>
+
+                    <div class="facilidades__divTexto" id="textComoComprar">
+                        <h3 id="tex" >COMO COMPRAR</h3>
+                    </div>
+                </a>
+            </div >
+
+            <div id="comoPagar">
+                <a  class="facilidades__div" href="../secundariosHtml/comoPagar.html">
+                    <div class="facilidades__contImage" id="iconoComoPagar">
+                        <img class="imagenFacilidades" src="../Imagenes/iconos/IconoComoPagar.png"  width="50px"  alt="iconoComoPagar" >
+                    </div>
+
+                    <div class="facilidades__divTexto" id="textComoPagar">
+                        <h3 id="tex" >COMO PAGAR</h3>
+                    </div>
+                </a>
+            </div >
+
+            <div  id="envios">
+                <a class="facilidades__div" href="../secundariosHtml/envios.html">
+                    <div class="facilidades__contImage">
+                        <img class="imagenFacilidades" src="../Imagenes/iconos/iconoEnvio.png"  width="50px"  alt="iconoEnvios" >
+                    </div>
+
+                    <div class="facilidades__divTexto">
+                        <h3 id="tex" >ENVIOS</h3>
+                    </div>
+                </a>
+            </div>
+                
+            <div id="seguinosEnInstagram">
+                <a class="facilidades__div" href="https://www.instagram.com/vidya.articulos.sustentables/">
+                    <div class="facilidades__contImage">
+                        <img class="imagenFacilidades" src="../Imagenes/iconos/iconoInstagram.png"  width="50px"  alt="seguinosEnInstagram" >
+                    </div>
+
+                    <div class="facilidades__divTexto">
+                        <h3 id="tex" >SEGUINOS EN INSTAGRAM</h3>
+                    </div>
+                </a>
+            </div>
+
+        </section> 
+
+        <!--boton whatsApp modo fixd , te envia directoi al chat con una pestaña nueva-->
+        <a class='fixed-whatsapp' href="https://api.whatsapp.com/send?phone=541133554248'">
+        </a>
+
+    </aside> <!--fin del aside-->   
+   
+    <!--INICIO DEL FOOTER-->
+    <footer>
+
+        <div class="footer__div">
+
+            <!--Mapa de Sitio-->
+            <div class="footer__mapaDeSitio">
+                <h3>MAPA DE SITIO</h3>
+                <ul class="footer__navegador">
+                    <li><a class="footer__items" href="tienda.html" >TIENDA</a></li>
+                    <li><a class="footer__items" href="lifestyle.html">LIFESTYLE</a></li>
+                    <li><a class="footer__items" href="nosotros.html">NOSOTROS</a></li>
+                    <li><a class="footer__items" href="contacto.html">CONTACTO</a></li>
+                    <li><a class="footer__items" href="../secundariosHtml/legales.html">LEGALES</a></li>
+                </ul>
+            </div>  
+
+            <!-- newsletter con input e-mail -->
+            <div class="footer__newsletter">
+                <h3>NEWSLETTER</h3> 
+                <input type="email" placeholder="ingrese su e-mail"> 
+                <input class="footer__btn" type="submit" value="Enviar" >
+            </div>
+
+        </div>
+        
+        <h4 class="footer__copyright">© 2021 Vidya Online</h4>
+        
+    </footer>
+    <!--FIN DEL FOOTER-->
+
+  <script src="../miMain.js"></script>
+   
+</body>
+</html>

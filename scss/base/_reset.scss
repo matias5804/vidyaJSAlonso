@@ -1,0 +1,23 @@
+* 
+::before,
+::after{/*incluíran cualquier borde o relleno que se añadan, y la caja de contenido se encogerá para absorber ese ancho extra.*/
+    box-sizing: border-box;
+}
+
+*{ /* reseteo CSS*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 100%;/*para que el grid ocupe el 100% de la pagina%*/
+    text-align: center;
+    height: 100%;   
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.ContainerBody{
+    gap:10px /*separacion entre los elementos*/;      
+}    
+

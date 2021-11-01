@@ -1,0 +1,66 @@
+button {
+    font-size: 110%;
+    color:$colorPri;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    background-color: $colorSec;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color:$colorPri;
+    color:$colorTer;
+}
+
+.footer__btn{/*boton*/
+    text-decoration: none;
+    padding: 4px;
+    color:$colorPri;
+    font-weight: 500;/*ancho de le letra*/
+    background-color: $colorSec;
+    border-radius: 6px;
+}
+
+.footer__btn:hover{   
+    background-color:$colorPri;
+    color:$colorTer;
+}
+
+.btnComprar{
+    font-size: medium;
+    color:$colorPri;
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    background-color: $colorSec;
+    margin-top: 5px;
+}
+.btn-info{
+    height: 30px;
+    width: 30px;
+    background-color:$colorTer;
+    color:$colorPri;
+}
+
+.btn-danger{
+    height: 30px;
+    width: 30px;
+    background-color:$colorTer;
+    color:$colorPri;
+}
+
+.btnVaFi{
+    height: 30px;
+    width: auto;
+    background-color:$colorPri;
+    color:$colorWhite;
+    padding: 5px 10px 5px 10px;
+}
+
+.btnVaFi:hover{   
+    background-color:$colorTer;
+    color:$colorPri;
+}
